@@ -25,5 +25,3 @@ def stream():
     except requests.exceptions.RequestException as e:
         return f"Error fetching the URL: {e}", 500
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
