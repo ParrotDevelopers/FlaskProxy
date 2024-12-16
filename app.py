@@ -52,7 +52,7 @@ def standard():
     except requests.exceptions.RequestException as e:
         return f"Error fetching the URL: {e}", 500
 
-@app.route('/postproxy', methods=['POST'])
+@app.route('/post', methods=['POST'])
 def postproxy():
     # Get the URL argument
     url = request.args.get('url')
