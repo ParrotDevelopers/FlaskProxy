@@ -5,6 +5,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def index():
+    return "Running ..."
+
 @app.route('/stream', methods=['GET'])
 def stream():
     # Get the URL argument
