@@ -1,7 +1,9 @@
 from flask import Flask, request, Response
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/stream', methods=['GET'])
 def stream():
